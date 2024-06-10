@@ -1,0 +1,38 @@
+#navigator-toolbox {
+  display: grid;
+  grid-template-areas:
+    "nav title"
+    "personal personal";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+}
+
+#titlebar {
+  grid-area: title;
+}
+
+#nav-bar {
+  grid-area: nav;
+}
+
+#PersonalToolbar {
+  grid-area: personal;
+}
+
+.toolbar-items, #toolbar-menubar[autohide="true"] #menubar-items, hbox.titlebar-spacer[type="pre-tabs"] {
+  visibility: collapse;
+}
+
+#toolbar-menubar[autohide="false"] {
+  flex: 1;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#toolbar-menubar[autohide="false"] + #TabsToolbar {
+  visibility: collapse;
+}
+
+#TabsToolbar {
+  justify-content: flex-end;
+}
