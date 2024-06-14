@@ -36,3 +36,7 @@
 #TabsToolbar {
   justify-content: flex-end;
 }
+
+#sidebar-box {
+  max-width: none !important;
+}
