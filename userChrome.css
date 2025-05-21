@@ -7,7 +7,7 @@
   grid-template-rows: auto auto;
 }
 
-#titlebar {
+#TabsToolbar {
   grid-area: title;
 }
 
