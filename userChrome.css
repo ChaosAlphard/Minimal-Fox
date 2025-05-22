@@ -2,13 +2,20 @@
   display: grid;
   grid-template-areas:
     "nav title"
-    "personal personal";
+    "personal personal"
+    "notify notify";
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
+  grid-auto-flow: row row;
 }
 
-#TabsToolbar {
+#TabsToolbar, #toolbar-menubar[autohide="false"] {
   grid-area: title;
+}
+
+#toolbar-menubar[autohide="false"] {
+  align-items: center;
+  margin-left: 10px;
 }
 
 #nav-bar {
@@ -19,22 +26,12 @@
   grid-area: personal;
 }
 
+#notifications-toolbar {
+  grid-area: notify;
+}
+
 .toolbar-items, #toolbar-menubar[autohide="true"] #menubar-items, hbox.titlebar-spacer[type="pre-tabs"] {
   visibility: collapse;
-}
-
-#toolbar-menubar[autohide="false"] {
-  flex: 1;
-  align-items: center;
-  margin-left: 10px;
-}
-
-#toolbar-menubar[autohide="false"] + #TabsToolbar {
-  visibility: collapse;
-}
-
-#TabsToolbar {
-  justify-content: flex-end;
 }
 
 #sidebar-box {
